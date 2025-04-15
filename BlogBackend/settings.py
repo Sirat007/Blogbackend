@@ -124,7 +124,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+if DEBUG:  # Only use this in development
+    STATICFILES_DIRS = [BASE_DIR / 'static']
+else:
+    STATICFILES_DIRS = []  # In production, rely on STATIC_ROOT only
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 STATIC_URL = 'static/'
