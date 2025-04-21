@@ -95,7 +95,7 @@ class PasswordEmailVerify(generics.RetrieveAPIView):
           
 
             msg = EmailMultiAlternatives(
-                 subject=subject, 
+                subject=subject, 
                 from_email=settings.FROM_EMAIL,  
                 to=[user.email], 
                 body=text_body

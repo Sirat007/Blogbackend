@@ -127,9 +127,8 @@ USE_TZ = True
 if DEBUG:  # Only use this in development
     STATICFILES_DIRS = [BASE_DIR / 'static']
 else:
-    STATICFILES_DIRS = []  # In production, rely on STATIC_ROOT only
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
+    STATICFILES_DIRS = []  
+
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -187,6 +186,7 @@ SIMPLE_JWT = {
 }
 
 FROM_EMAIL='shahriara0001@gmail.com'
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587

@@ -52,6 +52,13 @@ class Profile(models.Model):
     def save(self, *args, **kwargs):
         if self.full_name == "" or self.full_name == None:
             self.full_name = self.user.full_name
+
+        if self.facebook == "" or self.facebook == None:
+         self.facebook = "https://facebook.com" 
+    
+    
+        if self.twitter == "" or self.twitter == None:
+         self.twitter = "https://twitter.com"
         super(Profile, self).save(*args, **kwargs)
 
     def thumbnail(self):
